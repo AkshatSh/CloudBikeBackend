@@ -65,7 +65,7 @@ router.get('/', function(req, res){
 	res.json({message: "working"});
 });
 
-/*router.route('/route/:route_id')
+router.route('/route/:route_id')
 	.get(function(req, res){
 		//console.log(req);
 		console.log(req.params.route_id);
@@ -90,14 +90,14 @@ router.get('/', function(req, res){
 				res.json(target);
 			}
 		});
-		/*cbBikeEntry.findById(req.params.route_id, function (err, route) {
-			if (err) {
-				res.send(err);
-			}
-			res.json(route);
-		});
+		// bBikeEntry.findById(req.params.route_id, function (err, route) {
+		// 	if (err) {
+		// 		res.send(err);
+		// 	}
+		// 	res.json(route);
+		// });
 	})
-
+/*
 router.route('/routes')
 	.get(function(req, res) {
 		var routes = db.collection('routes');
