@@ -164,8 +164,8 @@ app.use('/api', router);
 
 function storeMenuData(_db, collection, _req, _res, data, callback) {
 	console.log("test");
-	console.log(data[0]);
-	data = data[0];
+	console.log(data);
+	data = data;
 
 	var customData = {
 		id: data._id, 
@@ -183,7 +183,7 @@ function storeMenuData(_db, collection, _req, _res, data, callback) {
 
 function insertDocument(_db, collection, _req, _res, data, callback) {
 	//console.log("wtf");
-	console.log(data[0]);
+	console.log(data);
 	data = data[0];
     _db.collection(collection).insert(data,
         function(err, result) {
