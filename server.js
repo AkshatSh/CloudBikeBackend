@@ -61,7 +61,8 @@ router.use(function(req, res, next) {
 });
 
 router.get('/', function(req, res){
-	res.json({message: "working"});
+	console.log("test");
+	//res.json({message: "working"});
 });
 
 router.route('/route/:route_id')
