@@ -97,7 +97,7 @@ router.route('/route/:route_id')
 		// 	res.json(route);
 		// });
 	})
-/*
+
 router.route('/routes')
 	.get(function(req, res) {
 		var routes = db.collection('routes');
@@ -110,7 +110,7 @@ router.route('/routes')
 		})
 	});
 
-
+/*
 router.route('/route')
 	.post(function(req, res) {
 		//var tempcbBikeEntry = new cbBikeEntry();
