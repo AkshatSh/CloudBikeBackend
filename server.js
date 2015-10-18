@@ -110,7 +110,7 @@ router.route('/routes')
 		})
 	});
 
-/*
+
 router.route('/route')
 	.post(function(req, res) {
 		//var tempcbBikeEntry = new cbBikeEntry();
@@ -159,7 +159,7 @@ router.route('/route')
 
 		//insertDocument(db , 'routes', req, res, {}, function(err, temp) {res.send();});
 
-	})  */
+	});
 app.use('/api', router);
 
 function storeMenuData(_db, collection, _req, _res, data, callback) {
