@@ -152,8 +152,8 @@ router.route('/route')
 
 
 
-		insertDocument(db, 'documents', req, res, recievedData, function (err, data) {
-			storeMenuData(db, 'routes', req, res, data, function () {});
+		insertDocument(db, 'documents', req, res, [recievedData], function (err, data) {
+			storeMenuData(db, 'routes', req, res, [data], function () {});
 		});
 
 
@@ -164,11 +164,11 @@ app.use('/api', router);
 
 function storeMenuData(_db, collection, _req, _res, data, callback) {
 	console.log("test");
-	console.log(data.data);
+	console.log(data);
 
 	var customData = {
-		id: data.data._id, 
-		time: data.data.recievedData.startTime
+		id: data._id, 
+		time: data.recievedData.startTime
 	};
 
 	_db.collection(collection).insert(customData, function(err, result) {
@@ -188,6 +188,7 @@ function insertDocument(_db, collection, _req, _res, data, callback) {
             {
                 console.log('err: ' + err);
             }
+            console.log(result);
             console.log('result: ' + data._id);
             //assert.equal(err, null);
             callback(null, data);
