@@ -153,7 +153,7 @@ router.route('/route')
 
 
 		insertDocument(db, 'documents', req, res, recievedData, function (err, data) {
-			//storeMenuData(db, 'routes', req, res, {data}, function () {});
+			storeMenuData(db, 'routes', req, res, data, function () {});
 		});
 
 
