@@ -65,7 +65,7 @@ router.get('/', function(req, res){
 	//res.json({message: "working"});
 });
 
-router.route('/route/:route_id')
+/*router.route('/route/:route_id')
 	.get(function(req, res){
 		//console.log(req);
 		console.log(req.params.route_id);
@@ -95,7 +95,7 @@ router.route('/route/:route_id')
 				res.send(err);
 			}
 			res.json(route);
-		});*/
+		});
 	})
 
 router.route('/routes')
@@ -159,7 +159,7 @@ router.route('/route')
 
 		//insertDocument(db , 'routes', req, res, {}, function(err, temp) {res.send();});
 
-	})
+	})  */
 app.use('/api', router);
 
 function storeMenuData(_db, collection, _req, _res, data, callback) {
