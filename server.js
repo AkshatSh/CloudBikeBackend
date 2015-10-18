@@ -153,7 +153,7 @@ router.route('/route')
 
 
 		insertDocument(db, 'documents', req, res, [recievedData], function (err, data) {
-			storeMenuData(db, 'routes', req, res, [data], function () {});
+			storeMenuData(db, 'routes', req, res, data, function () {});
 		});
 
 
@@ -168,7 +168,7 @@ function storeMenuData(_db, collection, _req, _res, data, callback) {
 
 	var customData = {
 		id: data._id, 
-		time: data.recievedData.startTime
+		time: data.startTime
 	};
 
 	_db.collection(collection).insert(customData, function(err, result) {
