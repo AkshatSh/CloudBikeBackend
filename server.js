@@ -164,7 +164,8 @@ app.use('/api', router);
 
 function storeMenuData(_db, collection, _req, _res, data, callback) {
 	console.log("test");
-	console.log(data);
+	console.log(data[0]);
+	data = data[0];
 
 	var customData = {
 		id: data._id, 
