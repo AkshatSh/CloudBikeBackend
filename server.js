@@ -181,6 +181,7 @@ function storeMenuData(_db, collection, _req, _res, data, callback) {
 }
 
 function insertDocument(_db, collection, _req, _res, data, callback) {
+	console.log("wtf");
 	console.log(data[0]);
     _db.collection(collection).insert(data,
         function(err, result) {
