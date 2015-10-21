@@ -1,6 +1,6 @@
 # CloudBike
 
-###Repository for hosting the backend on azure
+###Repository for hosting the backend on azure, SEE (github.com/AkshatSh/CloudBike) for full project
 
 ##Node.js server backend
 
